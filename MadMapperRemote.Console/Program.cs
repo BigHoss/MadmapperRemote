@@ -1,16 +1,14 @@
-﻿using System;
-using MadMapperRemote.Core;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+﻿using MadMapperRemote.Core;
 
 namespace MadMapperRemote.Console
 {
-	class Program
-	{
-		static void Main(string[] args)
-		{
-			var structure = MadMapperAccess.GetStructure("http://localhost:8010");
-			
-		}
-	}
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            MadMapperConnection connection = new MadMapperConnection("http://localhost:8010");
+
+            connection.OpenConnection();
+        }
+    }
 }
